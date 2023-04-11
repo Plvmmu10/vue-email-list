@@ -36,12 +36,15 @@
                         <input type="number" v-model="numEmail" name="numItems" class="numInput bg-warning rounded-3">
                     </div>
 
-                    <button class="btn btn-outline-warning" @click="getEmail">Generate your Email</button>
+                    <!-- Email button -->
+                    <button class="btn btn-outline-warning" @click="getEmail" :disabled="emailLoading">Generate your
+                        Email</button>
+
                     <ul v-if="rndEmail.length === numEmail">
                         <li class="p-3 m-3 rounded-3" v-for="email in rndEmail">{{email}}</li>
                     </ul>
                     <!-- Loading message -->
-                    <p v-else class="py-2">
+                    <p v-show="emailLoading" class="py-2">
                         <i class="loading-icon fas fa-circle-notch"></i>
                     </p>
 
@@ -63,14 +66,17 @@
                         <input type="number" v-model="numUser" name="numItems" class="numInput bg-warning rounded-3">
                     </div>
 
-                    <button class="btn btn-outline-warning" @click="getUsername">Generate your Username</button>
+                    <!-- Username button -->
+                    <button class="btn btn-outline-warning" @click="getUsername" :disabled="userLoading">Generate your
+                        Username</button>
+
                     <!-- List with possible username -->
                     <ul v-if="rndUser.length === numUser">
                         <li class="p-3 m-3 rounded-3" v-for="user in rndUser">{{user}}</li>
                     </ul>
 
                     <!-- Loading message -->
-                    <p v-else class="py-2">
+                    <p v-show="userLoading" class="py-2">
                         <i class="loading-icon fas fa-circle-notch"></i>
                     </p>
 

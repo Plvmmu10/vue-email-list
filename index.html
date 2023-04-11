@@ -21,29 +21,41 @@
         <div class="container text-white text-center p-2">
             <h1>Choose your Credentials</h1>
 
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <label for="numItems" class="py-2">
-                    <strong>Select how many email/username you want to generate</strong>
-                </label>
 
-                <input type="number" v-model="numItems" name="numItems" id="numItems" class="bg-warning rounded-3">
-            </div>
 
 
             <div class="row pt-5">
                 <!-- Col with email generator -->
                 <div class="col-12 col-lg-6">
+                    <!-- Input for how many emails you want to generate -->
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <label for="numItems" class="py-2">
+                            <strong>Select how many email you want to generate</strong>
+                        </label>
+
+                        <input type="number" v-model="numEmail" name="numItems" class="numInput bg-warning rounded-3">
+                    </div>
+
                     <button class="btn btn-outline-warning" @click="getEmail">Generate your Email</button>
-                    <ul v-if="rndEmail.length === numItems">
+                    <ul v-if="rndEmail.length === numEmail">
                         <li class="p-3 m-3 rounded-3" v-for="email in rndEmail">{{email}}</li>
                     </ul>
                 </div>
 
                 <!-- Col with username generator -->
                 <div class="col-12 col-lg-6">
+                    <!-- Input for how many username you want to generate -->
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <label for="numItems" class="py-2">
+                            <strong>Select how many username you want to generate</strong>
+                        </label>
+
+                        <input type="number" v-model="numUser" name="numItems" class="numInput bg-warning rounded-3">
+                    </div>
+
                     <button class="btn btn-outline-warning" @click="getUsername">Generate your Username</button>
                     <!-- List with possible username -->
-                    <ul v-if="rndUser.length === numItems">
+                    <ul v-if="rndUser.length === numUser">
                         <li class="p-3 m-3 rounded-3" v-for="user in rndUser">{{user}}</li>
                     </ul>
                 </div>

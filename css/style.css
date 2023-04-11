@@ -12,7 +12,8 @@ ul {
     list-style-type: none;
 }
 
-#numItems {
-    width: 10%;
+.numInput {
+    width: 30%;
     border: 0;
+    margin-bottom: 1rem;
 }

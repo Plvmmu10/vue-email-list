@@ -40,6 +40,16 @@
                     <ul v-if="rndEmail.length === numEmail">
                         <li class="p-3 m-3 rounded-3" v-for="email in rndEmail">{{email}}</li>
                     </ul>
+                    <!-- Loading message -->
+                    <p v-else class="py-2">
+                        <i class="loading-icon fas fa-circle-notch"></i>
+                    </p>
+
+                    <!-- Not selected message -->
+                    <p v-if="rndEmail.length === 0" class="text-danger py-2">
+                        <strong>Nessuna quantità selezionata</strong>
+                    </p>
+
                 </div>
 
                 <!-- Col with username generator -->
@@ -58,6 +68,16 @@
                     <ul v-if="rndUser.length === numUser">
                         <li class="p-3 m-3 rounded-3" v-for="user in rndUser">{{user}}</li>
                     </ul>
+
+                    <!-- Loading message -->
+                    <p v-else class="py-2">
+                        <i class="loading-icon fas fa-circle-notch"></i>
+                    </p>
+
+                    <!-- Not selected message -->
+                    <p v-if="rndUser.length === 0" class="text-danger py-2">
+                        <strong>Nessuna quantità selezionata</strong>
+                    </p>
                 </div>
             </div>
         </div>

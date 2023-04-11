@@ -17,3 +17,13 @@ ul {
     border: 0;
     margin-bottom: 1rem;
 }
+
+.loading-icon {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(1turn);
+    }
+}

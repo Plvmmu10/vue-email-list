@@ -11,3 +11,8 @@ li {
 ul {
     list-style-type: none;
 }
+
+#numItems {
+    width: 10%;
+    border: 0;
+}

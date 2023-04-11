@@ -1,0 +1,13 @@
+body,
+li {
+    background-color: #212529;
+}
+
+.container {
+    background-color: #1b1f22;
+    margin-top: 10%;
+}
+
+ul {
+    list-style-type: none;
+}

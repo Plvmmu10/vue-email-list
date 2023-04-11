@@ -12,14 +12,35 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Vue Email List</title>
 </head>
 
 <body>
+    <div id="app">
+        <div class="container text-white text-center">
+            <h1>Choose your Credentials</h1>
 
+            <div class="row pt-5">
+                <!-- Col with email generator -->
+                <div class="col-12 col-lg-6">
+                    <button class="btn btn-outline-warning" @click="getEmail">Generate your Email</button>
+                    <ul v-if="rndEmail.length === 10">
+                        <li class="p-3 m-3 rounded-3" v-for="email in rndEmail">{{email}}</li>
+                    </ul>
+                </div>
 
-
+                <!-- Col with username generator -->
+                <div class="col-12 col-lg-6">
+                    <button class="btn btn-outline-warning">Generate your Username</button>
+                    <!-- List with possible username -->
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/script.js"></script>
 </body>
